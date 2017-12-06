@@ -1,0 +1,22 @@
+<h1>Send Me A Message!</h1>
+
+<hr>
+
+<%= form_for @contact, remote: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class:"form-control form-control-sm" %> 
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class:"form-control form-control-sm" %> 
+
+  <%= f.label :message %>
+  <%= f.text_area :message, class:"form-control form-control-sm" %>
+
+  <div class="hidden">
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname %>
+  </div>
+
+  <%= f.submit "Send Message", class:"btn btn-default pull-right" %>
+<% end %>
+

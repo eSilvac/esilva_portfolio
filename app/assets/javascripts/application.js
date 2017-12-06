@@ -12,7 +12,13 @@
 //
 //= require jquery
 //= require jquery-ui
+//= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
+//= require clipboard
 //= require_tree .
+
+$(document).ready(function(){  
+  var clipboard = new Clipboard('.clipboard-btn');
+});

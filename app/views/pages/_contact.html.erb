@@ -1,0 +1,30 @@
+<div class="col-sm-4 text-center social">
+  <div class="facebook">
+    <%= link_to "#{fa_icon "facebook"}".html_safe, "https://www.facebook.com/esteban.silva.16", target: :_blank, title: 'Facebook' %>
+  </div><br>
+  <div class="github">
+    <%= link_to "#{fa_icon "github"}".html_safe, "https://github.com/eSilvac", target: :_blank, title: 'Github' %>
+  </div><br>
+  <div class="email">
+    <span title="Email" class="icon" ><%= fa_icon "envelope-o" %></span>
+    <div class="email-dir" >
+      <span id="bar">esilva1995@gmail.com </span>
+      <span class="clipboard-btn copy" data-clipboard-action="copy" data-clipboard-target="#bar"><%= fa_icon "clipboard" %></span>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6 contact-me">
+  <%= render "message_form" %>
+</div>
+<script>
+  $('.email .icon').on('click', function(){
+    $(this).hide();
+    $('.email-dir').fadeIn(1500);
+  });
+
+  $('.email-dir').on('mouseleave', function(){
+    $(this).fadeOut(500, function(){
+      $('.email .icon').show();
+    });
+  });
+</script>
