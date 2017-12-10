@@ -1,4 +1,4 @@
-$bgDefault      : #2f7bab;
+$bgDefault      : $bg-principal;
 $bgHighlight    : #2ba1c0;
 $colDefault     : #ffffff;
 $colHighlight   : #ffffff;
@@ -16,6 +16,7 @@ $dropDown       : true;
       color: $colDefault;
       border-radius: .25rem;
       margin: 0 0.25em;
+      cursor: pointer;
       &:not(.disabled) {
         &:hover, &:focus {
           color: $colHighlight; }}}

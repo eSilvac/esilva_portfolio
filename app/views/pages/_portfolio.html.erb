@@ -1,0 +1,67 @@
+<span class="portfolio-title">Portfolio</span>
+<div class="row justify-content-center page">
+  <div class="col-sm-6 images">
+    <%= render "carousel" %>
+  </div>
+  <div class="col-sm-3 description">
+    <h1 class="title">Pages Title</h1>
+    <p class="about-page">
+      Esto es una prueba para medir el espacio de la descripcion de la pagina para ver que tanto espacio hay y que no sobreáse de los 6 renglones para que quede todo bien.
+    </p>
+    
+    <div class="languages">
+      <span>Languages:</span>
+      <ul>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center page">
+
+  <div class="col-sm-6 images">
+    <%= image_tag "prueba/try.png", width: "100%" %>
+  </div>
+  <div class="col-sm-3 description">
+    <h1 class="title">Pages Title</h1>
+    <p class="about-page">
+      Esto es una prueba para medir el espacio de la descripcion de la pagina para ver que tanto espacio hay y que no sobreáse de los 6 renglones para que quede todo bien.
+    </p>
+    
+    <div class="languages">
+      <span>Languages:</span>
+      <ul>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+        <li>primer lenguaje</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.portfolio .images').hover(
+    function() {
+      $(this).addClass('active').parent().find('.description').addClass('active');
+    },
+    function() {
+      $(this).removeClass('active').parent().find('.description').removeClass('active');
+    }
+  );
+
+  $('.portfolio .description').hover(
+    function() {
+      $(this).addClass('active').parent().find('.images').addClass('active');
+    },
+    function() {
+      $(this).removeClass('active').parent().find('.images').removeClass('active');
+    }
+  );
+</script>

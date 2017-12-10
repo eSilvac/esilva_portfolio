@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portafolio</title>
+    <title>eSilva - Portafolio</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   </head>
 
   <body>
@@ -19,22 +19,28 @@
         <div class="collapse navbar-collapse pull-right" id="navbarTogglerDemo03">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">About Me<span class="sr-only">(current)</span></a>
+              <a class="nav-link" data-scroll="#about-me">About Me & Skills<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
+              <a class="nav-link" data-scroll="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" data-scroll="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
     <%= yield %>
   </body>
 </html>
+
+<script>
+  $(".nav-link").click(function() {
+    let link = $(this).data('scroll');
+    console.log(link)
+    $('html, body').animate({
+      scrollTop: $(link).offset().top
+    }, 2000);
+  });
+</script>
