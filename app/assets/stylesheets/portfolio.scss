@@ -36,11 +36,19 @@
         font-size: 23px;
         font-weight: bold;
         margin-top: 0.5em;
+        margin-bottom: 0;
+      }
+      .go-to {
+        font-size: 13px;
+        color: #2B2B2B;
+        cursor: pointer;
+        transition-duration: 1s;
       }
       .about-page {
         font-size: 16px;
         line-height: 20px;
-        margin-bottom: 5px;
+        margin-top: 0.7em;
+        margin-bottom: 0.5em;
       }
       .languages {
         font-size: 16px;
@@ -50,6 +58,9 @@
     .active {
       background-color: #EBEBEB;
       opacity: 1;
+      .go-to {
+        color: #007bff;
+      }
     }
   }
 }
