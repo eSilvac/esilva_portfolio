@@ -1,25 +1,19 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" id="button" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" id="button" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" id="button" data-slide-to="2"></li>
-  </ol>
+<div id="<%= page.id %>" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag "prueba/try.png", width: "100%" %>
+      <%= image_tag "pages/#{page.name.downcase}/0_ss.jpg", width: "100%" %>
     </div>
-    <div class="carousel-item">
-      <%= image_tag "prueba/try.png", width: "100%" %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag "prueba/try.png", width: "100%" %>
-    </div>
+    <% (1..page.screenshots-1).each do |number| %>
+      <div class="carousel-item">
+        <%= image_tag "pages/#{page.name.downcase}/#{number}_ss.jpg", width: "100%" %>
+      </div>
+    <% end %>
   </div>
-  <a class="carousel-control-prev" id="change" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" id="change" href="#<%= page.id %>" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" id="change" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" id="change" href="#<%= page.id %>" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
