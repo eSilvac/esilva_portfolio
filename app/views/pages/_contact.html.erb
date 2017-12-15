@@ -1,22 +1,27 @@
-<div class="col-sm-3 text-center align-self-center social">
-  <div class="prueba">
-    <div class="facebook">
-      <%= link_to "#{fa_icon "facebook"}".html_safe, "https://www.facebook.com/esteban.silva.16", target: :_blank, title: 'Facebook' %>
-    </div><br>
-    <div class="github">
-      <%= link_to "#{fa_icon "github"}".html_safe, "https://github.com/eSilvac", target: :_blank, title: 'Github' %>
-    </div><br>
-    <div class="email">
-      <span title="Email" class="icon" ><%= fa_icon "envelope-o" %></span>
-      <div class="email-dir" >
-        <span id="bar">esilva1995@gmail.com </span>
-        <span class="clipboard-btn copy" data-clipboard-action="copy" data-clipboard-target="#bar"><%= fa_icon "clipboard" %></span>
+<span class="contact-title">Contact</span>
+
+<div class="row justify-content-center contact">
+
+  <div class="col-md-12 col-lg-3 text-center align-self-center social">
+    <div class="prueba">
+      <div class="facebook">
+        <%= link_to "#{fa_icon "facebook"}".html_safe, "https://www.facebook.com/esteban.silva.16", target: :_blank, title: 'Facebook' %>
+      </div>
+      <div class="github">
+        <%= link_to "#{fa_icon "github"}".html_safe, "https://github.com/eSilvac", target: :_blank, title: 'Github' %>
+      </div>
+      <div class="email">
+        <span title="Email" class="icon" ><%= fa_icon "envelope-o" %></span>
+        <div class="email-dir" >
+          <span id="bar">esilva1995@gmail.com </span>
+          <span class="clipboard-btn copy" data-clipboard-action="copy" data-clipboard-target="#bar"><%= fa_icon "clipboard" %></span>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="col-sm-6 contact-me">
-  <%= render "message_form" %>
+  <div class="col-md-12 col-lg-6 contact-me">
+    <%= render "message_form" %>
+  </div>
 </div>
 <script>
   $('.email .icon').on('click', function(){

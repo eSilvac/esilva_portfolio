@@ -1,6 +1,11 @@
 footer {
   background-color: $bg-principal;
-  padding: 60px 0;
+  padding: 20px 0 60px;
+  .contact-title {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
   .contact {
     .contact-me {
       color: white;
@@ -51,11 +56,11 @@ footer {
         }
       }
       .facebook {
-        margin-bottom: 10px;
+        margin-bottom: 35px;
         a { padding: 10px 19px;}
       }
       .github {
-        margin-bottom: 10px;
+        margin-bottom: 35px;
         a { padding: 11px 15px;}
       }
       .email {

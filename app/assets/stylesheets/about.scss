@@ -9,10 +9,9 @@
   .my-info{
     margin-top: 25px;
     .photo {
-      div {
-        background-color: red;
-        width: 100%;
-        height: 200px;
+      img {
+        border: 8px solid #303030;
+        border-radius: 5px;
       }
     }
     .description {
@@ -40,6 +39,16 @@
       font-weight: bold;
       margin: 5px 0 30px;
       display: block;
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .about-me {
+    .description {
+      div {
+        margin-top: 30px;
+      }
     }
   }
 }
