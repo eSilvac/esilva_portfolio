@@ -1,0 +1,17 @@
+<% if status == "success" %>
+  <div class="alert alert-success alert-dismissible text-center" role="alert">
+    <span class="message">Thank you!" Message Send, I will answer you as soon as possible.</span>
+  </div>
+<% end %>
+
+<% if status == "error" %>
+  <div class="alert alert-danger alert-dismissible text-center" role="alert">
+    <span class="message">Sorry!! Cannot Send Message.</span>
+  </div>
+<% end %>
+
+<script>
+  $(".alert").fadeTo(3000, 500).slideUp(500, function(){
+    $(".alert").slideUp(500);
+  });   
+</script>
