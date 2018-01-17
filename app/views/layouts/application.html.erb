@@ -19,11 +19,16 @@
 </html>
 
 <script>
-  $(".nav-link").click(function() {
-    let link = $(this).data('scroll');
-    $('html, body').animate({
-      scrollTop: $(link).offset().top
-    }, 2000);
+  $("#navbar a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){     
+        window.location.hash = hash;
+      });
+    }
   });
 
   var position = $(window).scrollTop(); 
