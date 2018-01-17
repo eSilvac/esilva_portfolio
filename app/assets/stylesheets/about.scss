@@ -1,23 +1,15 @@
 .about-me {
-  .presentation {
-    margin-top: 40px;
-    span {
-      font-size: 30px;
-      font-weight: bold;
-    }
-  }
-  .my-info{
+  margin-top: 35px;
+  .my-history {
     margin-top: 25px;
     .photo {
       img {
-        border: 8px solid #303030;
-        border-radius: 5px;
+        border: 5px solid #303030;
       }
     }
-    .description {
+    .history {
       div {
-        color: white;
-        background-color: #303030;
+        color: #303030;
         padding: 15px;
         border-radius: 15px;
         p {
@@ -26,18 +18,18 @@
       }
     }
   }
-  .studies {
-    margin-top: 30px;
-    .title {
-      text-align: center;
+  .personal-info {
+    margin-top: 50px;
+    h3 {
+      color: #7A7A7A;
       font-size: 20px;
-      font-weight: bold;
     }
+  }
+  .education {
+    margin-top: 30px;
     .eafit, .make-it {
       text-align: justify;
       font-size: 15px;
-      color: white;
-      background-color: #303030;
       padding: 20px 25px;
       margin-top: 20px;
       border-radius: 5px;
@@ -50,19 +42,32 @@
       }
     }
   }
-  .skills {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    .title {
-      text-align: center;
-      font-size: 20px;
-      margin: 10px 0;
-    }
+  .education-title, .personal-info-title {
+    margin-top: 50px;
+    padding: 0;
+    text-align: center;
     span {
-      font-size: 13px;
-      font-weight: bold;
-      margin: 5px 0 30px;
-      display: block;
+      color: #303030;
+      font-size: 25px;
+      overflow: hidden;
+      text-align: center;
+    }
+    span:before, span:after {
+      content: " ";
+      background-color: black;
+      height: 1px;
+      width: 20%;
+      vertical-align: middle;
+      display: inline-block;
+      position: relative;
+    }
+    span:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    span:after {
+      left: 0.5em;
+      margin-right: -50%;
     }
   }
 }

@@ -1,0 +1,52 @@
+.skills {
+  margin-top: 30px;
+  .skill {
+    width: 100%;
+    margin-bottom: 60px;
+    text-align: center;
+    .image {
+      display: inline-block;
+      width: 30%;
+      img {
+        width: 100%;
+      }
+    }
+    span {
+      font-size: 15px;
+      font-weight: bold;
+      margin: 10px 0;
+      display: block;
+    }
+    .progressbar {
+      display: inline-block;
+      width: 70%;
+      .progress {
+        background: #6D6D6D;
+        padding: 7px;
+        border-radius: 15px;
+        height: 25px;
+        div { 
+          border-radius: 8px; 
+          width: 0; 
+          animation-direction: reverse;
+          transition: width 2s ease-in-out; 
+        }
+        .red { background-color: #dc3545 !important;transition-delay: 4s; }
+        .yellow { background-color: #f0ad4e !important; transition-delay: 2s; }
+        .green { background-color: #45B845 !important; }
+      }
+    }
+  }
+}
+
+.finish {
+  .skill {
+    .progressbar {
+      .progress {
+        .red { width: 25%; }
+        .yellow { width: 75%; }
+        .green { width: 90%; }
+      }
+    }
+  }
+}

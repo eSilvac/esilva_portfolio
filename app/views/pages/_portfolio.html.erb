@@ -1,43 +1,26 @@
-<span class="portfolio-title">Portfolio</span>
-
-<% @pages.each do |page| %>
-  <div class="row justify-content-center page">
-    <div class="col-md-12 col-lg-6 images">
-      <%= render "carousel", page: page %>
-    </div>
-    <div class="col-md-12 col-lg-3 description">
-      <h1 class="title"><%= page.name %></h1>
-      <%= link_to "Go to Website.", page.url, target: :_blank, class:"go-to" %>
-      <p class="about-page"><%= page.description %></p>
-      
-      <div class="languages">
-        <span>Languages:</span>
-        <ul>
-          <% page.languages.each do |language| %>
-            <li><%= language %></li>
-          <% end %>
-        </ul>
+<div class="row">
+  <div class="col-12 section-title">
+    <h2>Portfolio</h2>
+  </div>
+</div>
+<div class="row pages">
+  <% @pages.each do |site| %>
+    <div class="col-md-12 col-lg-6 site" id="<%= site.id %>">
+      <%= image_tag "pages/#{site.name.downcase}/0_ss.jpg", width: "100%" %>
+      <div class="center-objects">
+        <div class="title">
+          <span><%= site.name %></span>
+        </div>
+        <div class="btnfx-sites buttons-page">
+          <a href="#" class="btn" data-toggle="modal" data-target="#modal-<%= site.id %>">
+            <div>
+              <span class='modal-link'>Show More <%= fa_icon "search-plus" %></span>
+            </div>  
+          </a>
+          <%= link_to "<div><span class='page-lk'>Visit Page #{fa_icon "external-link"}</span></div>".html_safe, "#{site.url}", class:"btn", target: "_blank" %>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
-
-<script>
-  $('.portfolio .images').hover(
-    function() {
-      $(this).addClass('active').parent().find('.description').addClass('active');
-    },
-    function() {
-      $(this).removeClass('active').parent().find('.description').removeClass('active');
-    }
-  );
-
-  $('.portfolio .description').hover(
-    function() {
-      $(this).addClass('active').parent().find('.images').addClass('active');
-    },
-    function() {
-      $(this).removeClass('active').parent().find('.images').removeClass('active');
-    }
-  );
-</script>
+    <%= render "images_modal", site: site %>
+  <% end %>
+</div>

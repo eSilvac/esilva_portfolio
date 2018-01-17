@@ -1,0 +1,12 @@
+<div class="modal fade" id="modal-<%= site.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span class="close1" aria-hidden="true">&times;</span>
+  </button>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <%= render "carousel", page: site %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,33 @@
-<section class="about-me" id="about-me">
-  <div class="container">
-    <%= render "about" %>
-  </div>
-</section>
-<section class="portfolio" id="portfolio">
-  <div class="container">
-    <%= render "portfolio" %>
-  </div>
-</section>
-<footer id="contact">
-  <div class="container">
-    <%= render "contact" %>
-  </div>
-</footer>
+<div class="-first-animation">
+  <%= render "first_animation" %>
+</div>
+<div class="scrollable">
+  <section class="intro" id="home">
+    <%= render "presentation" %>
+  </section>
+  <section class="about-me" id="about">
+    <div class="container">
+      <%= render "about" %>
+    </div>
+  </section>
+  <section class="skills" id="skills">
+    <div class="container">
+      <%= render "skills" %>
+    </div>
+  </section>
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <%= render "portfolio" %>
+    </div>  
+  </section>
+  <section class="contact" id="contact">
+    <div class="container">
+      <%= render "contact" %>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <%= render "social" %>
+    </div>
+  </footer>
+</div>

@@ -1,22 +1,43 @@
-<hr>
 <h1>Send Me A Message!</h1>
-<hr>
+
+<hr class="style1">
 
 <%= form_for @contact, remote: true do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, class:"form-control form-control-sm" %> 
+  <div class="col-12 inputfx">
+    <%= f.text_field :name, class:"effect" %>
+    <%= f.label :name %>
+    <span class="focus-bg"></span>
+  </div>
 
-  <%= f.label :email %>
-  <%= f.email_field :email, class:"form-control form-control-sm" %> 
+  <div class="col-12 inputfx">
+    <%= f.email_field :email, class:"effect" %>
+    <%= f.label :email %>
+    <span class="focus-bg"></span>
+  </div>
 
-  <%= f.label :message %>
-  <%= f.text_area :message, class:"form-control form-control-sm" %>
+  <div class="col-12 inputfx">
+    <%= f.text_area :message, class:"effect", rows:"3" %>
+    <%= f.label :message %>
+    <span class="focus-bg"></span>
+  </div>
 
   <div class="hidden">
     <%= f.label :nickname %>
     <%= f.text_field :nickname %>
   </div>
 
-  <%= f.submit "Send Message", class:"btn btn-default pull-right" %>
+  <div class="buttonfx text-center">
+    <button class="bouncein" type="submit">Send Message</button>
+  </div>
 <% end %>
+
+<script>
+  $(".inputfx").on('focusout', '.effect', function(){
+    if($(this).val() != "") {
+      $(this).addClass("has-content");
+    }else{
+      $(this).removeClass("has-content");
+    }
+  });
+</script>
 

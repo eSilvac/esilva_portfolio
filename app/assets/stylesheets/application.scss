@@ -3,19 +3,38 @@ $bg-principal: #199CD9;
 @import "jquery-ui";
 @import "font-awesome";
 @import "bootstrap";
+@import "scrollbar";
 @import "pages";
-@import "contact";
-@import "portfolio";
-@import "about";
 @import "navbar";
+@import "effects";
+@import "first-animation";
+@import "presentation";
+@import "about";
+@import "skills";
+@import "portfolio";
+@import "contact";
+@import "social";
+@import "modal";
 
-
-body { font-family: 'Comfortaa', cursive; }
-
-hr {
-  border-top: 1px solid #262626;
+html, body { 
+  font-family: 'Comfortaa', cursive;
+  position: relative;
+  height: 100%;
+}
+hr.style1 {
+  border-top: 2px solid #F5F5F5;
+  box-shadow: 0 0 15px white;
 }
 
+hr.style2 {
+  width: 100%;
+  border-top: 4px double rgb(189, 188, 177);
+}
+
+hr.style3 {
+  width: 60%;
+  border-top: 3px double #878787;
+}
 .alert-message {
   font-size: 15px;
   position: fixed;
@@ -23,4 +42,52 @@ hr {
   right: 20px;
   max-width: 400px;
   z-index: 1000;
+}
+
+.section-title {
+  padding: 0;
+  margin-bottom: 35px;
+  h2 {
+    color: #303030;
+    font-size: 30px;
+    overflow: hidden;
+    text-align: right;
+  }
+  h2:before {
+    content: "";
+    margin-left: -50%;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+    height: 4px;
+    width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    right: 0.5em;
+    position: relative;
+  }
+}
+
+.load {
+  .first-animation {
+    .txt-fx { 
+      visibility: hidden; 
+      p {
+        transition-delay: 4.5s;
+        opacity: 0;
+      }
+    }
+    .effect {
+      div { width: 0; }
+    }
+  }
+  .intro {
+    .information {
+      h1, span { top: 0; opacity: 1; }
+      .line {
+        div { opacity: 1; }
+        .right { right: -2px; }
+        .left { left: -2px; }
+      }
+    }
+  }
 }

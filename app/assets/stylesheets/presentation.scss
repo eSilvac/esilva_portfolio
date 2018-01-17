@@ -1,0 +1,57 @@
+.intro {
+  height: 100vh;
+  background: url(/assets/background/intro_image.jpeg) no-repeat center center;
+  background-size: cover;
+  .presentation {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .information {
+      font-family: 'Slabo 27px', serif;
+      h1, span {
+        position: relative;
+        top: -25px;
+        color: rgb(189, 188, 177);
+        transition: .4s;
+        opacity: 0;
+        cursor: default;
+      }
+      .name { 
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        transition-delay: 7.5s;
+      }
+      .active {
+        font-size: 41px ;
+        font-weight: bold;
+        display: block;
+        transition-delay: 7.9s;
+      }
+      .status {
+        font-size: 28px;
+        transition-delay: 8.3s;
+      }
+      .line {
+        div {
+          position: relative;
+          display: inline-block;
+          width: 305px;
+          margin: 30px auto;
+          border-top: 4px double rgb(189, 188, 177);
+          opacity: 0;
+          transition: 0.5s ease-out;
+          transition-delay: 9s;
+        }
+        .right {
+          right: 80%;
+        }
+        .left {
+          left: 80%;
+        }
+      }
+    }
+  }
+}

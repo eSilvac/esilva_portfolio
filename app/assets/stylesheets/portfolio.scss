@@ -1,76 +1,117 @@
 .portfolio {
-  padding: 30px 0;
-  margin-top: 20px;
-  background-color: #222222;
-  .portfolio-title {
-    color: white;
-    font-size: 25px;
-  }
-  .page {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    .images {
+  padding: 24px 0 15px;
+  margin-bottom: 80px;
+  background-color: white;
+  .pages {
+    .site {
+      background-color: black;
       padding: 0;
-      transition-duration: 1s;
-      #change {
-        background-color: black;
-        opacity: 0.2;
-        transition-duration: 0.4s;
-        &:hover { opacity: 0.65; }
+      position: relative;
+      transition: 0.4s;
+      z-index: 0;
+      img {
+        opacity: .85;
+        position: relative;
+        transition: 1s;
       }
-      #button {
-        background-color: black;
-        opacity: 0.7;
+      .center-objects {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        .title {
+          text-align: center;
+          width: 100%;
+          z-index: -1;
+          span {
+            opacity: 0;
+            color: white;
+            font-size: 33px;
+            cursor: default;
+            top: -80px;
+            position: relative;
+            transition: .1s;
+            transition-delay: 0s;
+          }
+        }
+        .buttons-page {
+          text-align: center;
+          width: 100%;
+          z-index: -1;
+          a {
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            font-size: 18px;  
+            padding: 10px 0;
+            margin: 10px;
+            width: 30%;
+            span {
+              opacity: 0;
+              bottom: -80px;
+              position: relative;
+              transition: .5s;
+              transition-delay: 0s;
+            }
+            &:hover {
+              background-color:rgba(255, 255, 255, .3);
+            }
+          }
+        }
       }
-    }
-    .description {
-      color: #222222;
-      background-color: #2B2B2B;
-      padding: 0 10px;
-      margin-left: 0;
-      border-left: 2px outset #2B2B2B;
-      border-radius: 0 8px 8px 0;
-      transition-duration: 1s;
-      .title { 
-        font-size: 23px;
-        font-weight: bold;
-        margin-top: 0.5em;
-        margin-bottom: 0;
-      }
-      .go-to {
-        font-size: 13px;
-        color: #2B2B2B;
-        cursor: pointer;
-        transition-duration: 1s;
-      }
-      .about-page {
-        font-size: 16px;
-        line-height: 20px;
-        margin-top: 0.7em;
-        margin-bottom: 0.5em;
-      }
-      .languages {
-        font-size: 16px;
-        span { text-decoration: underline; }
-      }
-    }
-    .active {
-      background-color: #EBEBEB;
-      .go-to {
-        color: #007bff;
+      &:hover {
+        box-shadow: 0px 0px 100px #000000;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 0.5s;
+        z-index: 1;
+        img {
+          transition: 0.5s;
+          opacity: .35;
+          border-color: transparent;
+        }
+        .title {
+          z-index: 2;
+          span { 
+            transition: 0.5s;
+            transition-delay: .6s;
+            opacity: 1;
+            top: 0;
+          }
+        }
+        .buttons-page {
+          z-index: 2;
+          a {
+            opacity: 1;
+            span { 
+              transition: 0.5s;
+              transition-delay: .6s;
+              opacity: 1; 
+              bottom: 0;
+            }
+          }
+          /* ----------------- effect -----------------*/
+          a::before, a::after { width: 100%; transition: all 0.2s linear; }
+          div::before, div::after { height: 100%; transition: all 0.2s linear; }
+          .btn::after { transition-delay: 0.2s; }
+          div::after { transition-delay: 0.4s; }
+          .btn::before { transition-delay: 0.6s; }
+          div::before { transition-delay: 0.8s; }
+          /* ----------------- effect -----------------*/
+        }
       }
     }
   }
 }
 
+
 @media (max-width:992px) {
   .portfolio {
     .page {
-      .description {
-        background-color: #EBEBEB;
-        border-left: 0;
-        border-radius: 0;
-      }
+
     }
   }
 }

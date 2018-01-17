@@ -1,0 +1,20 @@
+footer {
+  background-color: #222222;
+  padding: 10px;
+  .social {
+    a {
+      font-size: 25px;
+      color: #949494;
+      cursor: pointer;
+      transition-duration: .5s;
+      margin-right: 1em;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .copy-r {
+    font-size: 18px;
+    color: #949494;
+  }
+}
