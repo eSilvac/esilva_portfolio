@@ -166,7 +166,6 @@
   position: relative;
   background-color: black;
   padding: 4em;
-  transition-delay: 5s;
   z-index: 3;
   .hello {
     font-family: 'Anonymous Pro', monospace;
@@ -186,7 +185,7 @@
   }
   /* Animation */
   .anim-typewriter {
-    animation: typewriter 1s steps(17) 1s 1 normal both,
+    animation: typewriter .8s steps(17) .8s 1 normal both,
                blinkTextCursor 700ms steps(17) infinite normal;
   }
   @keyframes typewriter {

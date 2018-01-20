@@ -19,6 +19,7 @@ $bg-principal: #199CD9;
 html, body { 
   font-family: 'Comfortaa', cursive;
   position: relative;
+  overflow: hidden;
   height: 100%;
 }
 hr.style1 {
@@ -52,6 +53,7 @@ hr.style3 {
     font-size: 30px;
     overflow: hidden;
     text-align: right;
+    cursor: default;
   }
   h2:before {
     content: "";
@@ -72,12 +74,12 @@ hr.style3 {
     .txt-fx { 
       visibility: hidden; 
       p {
-        transition-delay: 4.5s;
+        transition-delay: 3.5s;
         opacity: 0;
       }
     }
     .effect {
-      div { width: 0; }
+      div { height: 0; }
     }
   }
   .intro {

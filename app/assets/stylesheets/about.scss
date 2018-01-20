@@ -23,6 +23,7 @@
     h3 {
       color: #7A7A7A;
       font-size: 20px;
+      cursor: default;
     }
   }
   .education {
@@ -33,13 +34,20 @@
       padding: 20px 25px;
       margin-top: 20px;
       border-radius: 5px;
-      p { 
-        margin-top: 15px;
-        margin-bottom: 0; 
-      }
       a { 
-        font-size: 20px;
+        font-size: 21px;
+        font-weight: bold;
         color: black; 
+      }
+      span {
+        font-size: 19px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+      }
+      p { 
+        margin-top: 5px;
+        margin-bottom: 0; 
       }
       img {
         opacity: 0.2;
@@ -62,6 +70,7 @@
       font-size: 25px;
       overflow: hidden;
       text-align: center;
+      cursor: default;
     }
     span:before, span:after {
       content: " ";

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro">
   </head>
 
-  <body data-spy="scroll" data-target="#navbar" data-offset="110">
+  <body>
     <%= render 'layouts/navbar' %>
     <div class="alert-message"></div>
     <%= yield %>
@@ -33,14 +33,14 @@
 
   var position = $(window).scrollTop(); 
 
-  $(window).on('scroll', function(){
+  $('.scrollable').on('scroll', function(){
     let actual = $('.navbar .navbar-nav .active').data('scroll');
     $('.scrollable').find(actual).addClass('finish');
     hasScrolled();
   });
 
   function hasScrolled() {
-    var scroll = $(window).scrollTop();
+    var scroll = $('.scrollable').scrollTop();
     if(scroll > position) {
       $('.navbar').addClass('nav-up');
     } else {
