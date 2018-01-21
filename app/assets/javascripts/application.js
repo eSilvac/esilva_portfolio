@@ -19,6 +19,26 @@
 //= require clipboard
 //= require_tree .
 
-$(document).ready(function(){  
-  var clipboard = new Clipboard('.clipboard-btn');
+$(document).ready(function(){
+  let distance = $('body').scrollTop();
+  if (distance !== 0) {
+    $('.first-animation').remove();
+    $('body').addClass('loadFast');
+    $('body').off('scroll touchmove mousewheel');
+  } else {
+    $('body').addClass('loadSlow');
+    $('body').on('scroll touchmove mousewheel', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  }
+});
+
+$(document).ready(function() {
+  $('.first-animation').addClass('activeBG');
+  setInterval(function(){ 
+    $('body').off('scroll touchmove mousewheel');
+    $('.nav-up').removeClass('nav-up');
+    $('.first-animation').remove();
+  }, 7500);
 });

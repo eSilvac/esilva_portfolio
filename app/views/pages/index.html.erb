@@ -1,33 +1,34 @@
 <div class="first-animation">
   <%= render "first_animation" %>
 </div>
-<div class="scrollable" data-spy="scroll" data-target="#navbar" data-offset="110">
-  <section class="intro" id="home">
-    <%= render "presentation" %>
-  </section>
-  <section class="about-me" id="about">
-    <div class="container">
-      <%= render "about" %>
-    </div>
-  </section>
-  <section class="skills" id="skills">
-    <div class="container">
-      <%= render "skills" %>
-    </div>
-  </section>
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <%= render "portfolio" %>
-    </div>  
-  </section>
-  <section class="contact" id="contact">
-    <div class="container">
-      <%= render "contact" %>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <%= render "social" %>
-    </div>
-  </footer>
-</div>
+<section class="intro" id="home">
+  <%= render "presentation" %>
+</section>
+<section class="about-me" id="about">
+  <div class="container">
+    <%= render "about" %>
+  </div>
+</section>
+<section class="skills" id="skills">
+  <div class="container">
+    <%= render "skills" %>
+  </div>
+</section>
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <%= render "portfolio" %>
+  </div>  
+</section>
+<section class="contact" id="contact">
+  <div class="container">
+    <%= render "contact" %>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <%= render "social" %>
+  </div>
+</footer>
+<script>
+  new PageFuncionality();
+</script>
