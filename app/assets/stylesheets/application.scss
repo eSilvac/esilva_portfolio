@@ -37,8 +37,9 @@ hr.style3 {
 .alert-message {
   font-size: 15px;
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 400px;
   z-index: 1000;
 }

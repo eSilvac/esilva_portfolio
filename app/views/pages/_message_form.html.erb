@@ -4,13 +4,13 @@
 
 <%= form_for @contact, remote: true do |f| %>
   <div class="col-12 inputfx">
-    <%= f.text_field :name, class:"effect" %>
+    <%= f.text_field :name, class:"effect", autocomplete:"off" %>
     <%= f.label :name %>
     <span class="focus-bg"></span>
   </div>
 
   <div class="col-12 inputfx">
-    <%= f.email_field :email, class:"effect" %>
+    <%= f.email_field :email, class:"effect", autocomplete:"off" %>
     <%= f.label :email %>
     <span class="focus-bg"></span>
   </div>

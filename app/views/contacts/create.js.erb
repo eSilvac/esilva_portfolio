@@ -1,1 +1,4 @@
 $('.alert-message').empty().append('<%= j render "layouts/messages", status: @status %>');
+<% if @status == "success" %>
+  $('.contact form .has-content').val("").removeClass('has-content');
+<% end %>
