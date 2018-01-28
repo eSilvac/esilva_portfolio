@@ -7,6 +7,12 @@
       <div class="modal-body">
         <%= render "carousel", page: site %>
       </div>
+      <div class="modal-footer">
+        <span>
+          <%= site.description %><br>
+          <strong>Tools Used: </strong><%= site.languages.join(', ') %>
+        </span>
+      </div>
     </div>
   </div>
 </div>

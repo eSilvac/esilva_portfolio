@@ -9,7 +9,6 @@
     .history {
       div {
         color: #303030;
-        padding: 15px;
         border-radius: 15px;
         p {
           margin-bottom: 0;
@@ -32,19 +31,20 @@
       font-size: 17px;
       padding: 20px 25px;
       margin-top: 20px;
-      border-radius: 5px;
       a { 
-        font-size: 21px;
+        color: #303030;
+        font-size: 23px;
         font-weight: bold;
-        color: black; 
       }
       span {
+        color: #676767;
         font-size: 19px;
-        margin-bottom: 10px;
+        margin: 10px 0;
         display: block;
         text-align: center;
       }
       p { 
+        color: #303030;
         margin-top: 5px;
         margin-bottom: 0; 
       }
@@ -91,11 +91,35 @@
   }
 }
 
-@media (max-width:992px) {
+@media only screen and (max-width: 768px) {
   .about-me {
-    .description {
+    .my-history {
+      .history {
+        div { margin-bottom: 20px; }
+        p { font-size: 16px; }
+      }
+    }
+    .personal-info {
       div {
-        margin-top: 30px;
+        margin-bottom: 35px;
+        h3 { margin-bottom: 5px; font-size: 18px; }
+        span { font-size: 16px; }
+      }
+    }
+    .education {
+      margin-top: 10px;
+      .eafit, .make-it { 
+        padding: auto; 
+        p { font-size: 16px; }
+        img {
+          height: 50%;
+        }
+      }
+    }
+    .education-title, .personal-info-title {
+      margin-top: 20px;
+      span:before, span:after { 
+        width: 5%;
       }
     }
   }

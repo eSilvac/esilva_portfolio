@@ -24,3 +24,9 @@
     .loading-fx:nth-child(10) { right: 90%; transition-delay: 4.72s; }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .first-animation {
+    display: none;
+  }
+}

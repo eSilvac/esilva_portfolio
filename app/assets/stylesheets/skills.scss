@@ -14,6 +14,7 @@
     span {
       font-size: 15px;
       font-weight: bold;
+      cursor: default;
       margin: 10px 0;
       display: block;
     }
@@ -31,8 +32,8 @@
           animation-direction: reverse;
           transition: width 2s ease-in-out; 
         }
-        .red { background-color: #dc3545 !important;transition-delay: 4s; }
-        .yellow { background-color: #f0ad4e !important; transition-delay: 2s; }
+        .red { background-color: #dc3545 !important; }
+        .yellow { background-color: #f0ad4e !important; }
         .green { background-color: #45B845 !important; }
       }
     }

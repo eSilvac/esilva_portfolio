@@ -55,3 +55,39 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  .intro {
+    .presentation {
+      .information {
+        h1, span {
+          top: 0;
+          opacity: 1;
+          transition: 0s;
+        }
+        .name {
+          font-size: 50px;
+          margin-bottom: 15px;
+          transition-delay: 0s;
+        }
+        .active {
+          font-size: 25px;
+          transition-delay: 0s;
+        }
+        .status {
+          font-size: 25px;
+          transition-delay: 0s;
+        }
+        .line {
+          width: 80%;
+          border-top: 4px double rgb(189, 188, 177);
+          margin: 20px auto;
+          .right, .left {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@
 </div>
 <div class="row pages">
   <% @pages.each do |site| %>
-    <div class="col-md-12 col-lg-6 site" id="<%= site.id %>">
+    <div class="hidden-md-up col-lg-6 site" id="<%= site.id %>">
       <%= image_tag "pages/#{site.name.downcase}/0_ss.jpg", width: "100%" %>
       <div class="center-objects">
         <div class="title">

@@ -102,3 +102,8 @@ $dropDown       : true;
   .dropdown-item.active {
     color: $colHighlight;
     background-color: $bgHighlight; }}
+
+.navbar-toggler {
+  border: none;
+  margin-left: auto;
+}

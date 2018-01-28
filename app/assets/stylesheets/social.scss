@@ -2,19 +2,40 @@ footer {
   background-color: #222222;
   padding: 10px;
   .social {
-    a {
-      font-size: 25px;
-      color: #949494;
-      cursor: pointer;
-      transition-duration: .5s;
-      margin-right: 1em;
-      &:hover {
-        color: white;
+    .left {
+      float: left;
+      a {
+        font-size: 25px;
+        color: #949494;
+        cursor: pointer;
+        transition-duration: .5s;
+        margin-right: 1em;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .right {
+      float: right;
+      .copy-r {
+        font-size: 18px;
+        color: #949494;
       }
     }
   }
-  .copy-r {
-    font-size: 18px;
-    color: #949494;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+    .right, .left {
+      float: initial !important;
+    }
+    .social {
+      .left {
+        a:last-child { margin-right: 0; }
+      }
+      
+    }
   }
 }

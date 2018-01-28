@@ -7,6 +7,9 @@
   height: 100%;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9); 
+  .modal-lg {
+    max-width: 65%;
+  }
   .close1 {
     position: absolute;
     top: 15px;
@@ -54,8 +57,33 @@
         }
       }
     }
+    .modal-footer { display: none; }
   }
 }
-.modal-lg {
-    max-width: 65%;
+
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    .modal-lg { max-width: 100%; }
+    .close1 {
+      top: 5px;
+      right: 15px;
+    }
+    .modal-content {
+      .modal-body {
+        .carousel {
+          a { 
+            width: 10%;
+            height: 15%;
+          }
+          .desc { display: none;}
+        }
+      }
+      .modal-footer {
+        display: inline;
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
 }
