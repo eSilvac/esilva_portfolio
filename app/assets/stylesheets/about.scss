@@ -3,6 +3,9 @@
   .my-history {
     .photo {
       img {
+        position:relative;
+        top: 50%;
+        transform: translateY(-50%);
         border: 5px solid #303030;
       }
     }
